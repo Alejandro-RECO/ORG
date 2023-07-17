@@ -1,0 +1,111 @@
+:root {
+    --color1 : #b1caff;
+    --color2 : #feecff;
+    --color3 : #161934;
+    --color4 : #77767c;
+    --color5 : #e2e2e2;
+    --color6 : #afafaf7a;
+}
+.container-semi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+    background-color: var(--color6);
+}
+
+.container-semi__img{
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+.container-semi__data{
+    height: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.container-semi__data-list{
+    list-style: none;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.container-semi__data-list-component{
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+}
+.container-semi__data-list-component-a{
+    text-decoration: none;
+    color: var(--color3);
+}
+.container-semi__data-form{
+    padding: 20px;
+    width: 480px;
+}
+.data-form__title{
+    color: var(--color3);
+    display: flex;
+    justify-content: start;
+    padding-bottom: 10px;
+}
+.data-form__inputs{
+    display: flex;
+    flex-direction: column;
+}
+.data-form__input{
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    height: 70px;
+    border-radius: .2rem;
+    padding: 10px;
+    color: var(--color3);
+    box-shadow: 0 5px 9px -6px rgba(0, 0, 0, 0.4);
+}
+.data-form__input:focus{
+    outline: none;
+}
+.data-from__button{
+    border: none;
+    height: 50px;
+    width: 120px;
+    background-color: var(--color6);
+    color: var(--color3);
+}
+
+@media (min-width: 650px) {
+    .container-semi{
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        padding: 20px;
+    }
+}
+@media (min-width: 1100px){
+    .container-semi{
+        display: flex;
+        flex-direction: inherit;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-around;
+        gap: 0px;
+        padding: 20px;
+        /* background-color: red; */
+    }
+    .container-semi__cont{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 90px;
+    }
+    .container-semi__data-list{
+        text-align: left;
+    }
+    .container-semi__data-form {
+        width: 600px;
+    }
+}
