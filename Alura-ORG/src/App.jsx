@@ -1,12 +1,22 @@
-import reactLogo from './assets/react.svg'
+import { useState } from 'react'
 import './App.css'
-import  Header  from './components/Header/Header.js'
+import { Header } from './components/Header/Header'
+import { Formulario } from './components/Formulario/Formulario'
+import { MiOrg } from './components/MiOrg/MiOrg'
 
 function App() {
-  console.log(Header)
+
+  const [mostrarFormulario, actualizarMostrar] = useState(true)
+
+  const cambiarMostrar = () =>{
+    actualizarMostrar(!mostrarFormulario)
+  }
+
   return (
     <>
-      <h1>HEllO WORD AND REACT</h1>
+      <Header />
+      { mostrarFormulario === true ? <Formulario /> : <></>}     
+      <MiOrg cambiarMostrar={cambiarMostrar}/>
     </>
   )
 }

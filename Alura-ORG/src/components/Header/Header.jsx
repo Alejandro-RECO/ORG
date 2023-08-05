@@ -1,9 +1,9 @@
-
+import './Header.css' ; 
 
 export const Header = ()=>{
-    const imgHeader = <img src="../public/img/header.png" alt="ORG"></img>
     return(
-        imgHeader
-    )
+        <header className='Header'>
+            <img src="./img/header.png" alt="Org" />
+        </header> 
+    ) 
 }
-
