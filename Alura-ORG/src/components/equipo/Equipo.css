@@ -1,0 +1,26 @@
+:root{
+    --Azul : #6278F7;
+    --Azul-mas : #95FFD4;
+    --Negro :  #212121;
+    --Blanco : #f7f7f7;
+    --Blanco-mas : #ffffff;
+    --Verde-claro : #d9f7e9;
+    --Verde : #57c278;
+}
+
+
+.Equipo{
+    width: 100%;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32px;
+    
+    & h3{
+        font-weight: 400;
+        color: var( --Negro);
+        border-bottom: 4px solid;
+        display: inline-block;
+        padding-bottom: 8px;
+    }
+}
