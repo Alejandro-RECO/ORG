@@ -1,15 +1,18 @@
+/* eslint-disable react/prop-types */
 import './Formulario.css';
 import { useState } from 'react';
 import { CampoTexto } from '../campoTexto/CampoTexto';
 import { ListaOpciones } from '../listaEquipos/ListaEquipos';
 import { Boton } from '../boton/Boton';
 
-export const Formulario = ()=>{
+export const Formulario = (props)=>{
 
     const [nombre, setNombre] = useState("");
     const [puesto, setPuesto] = useState("");
     const [foto, setFoto] = useState("");
     const [equipo, setEquipo] = useState("");
+
+    const { registrarColaborador } = props
 
     const manejarEnvio = (e) => {
         e.preventDefault();
@@ -20,7 +23,7 @@ export const Formulario = ()=>{
             foto: foto,
             equipo: equipo
         }
-        console.log(datosEnviar);
+        registrarColaborador(datosEnviar);
     }
 
     return(
@@ -50,6 +53,7 @@ export const Formulario = ()=>{
                 <ListaOpciones 
                     valor ={equipo}
                     setEquipo = {setEquipo}
+                    equipos = {props.equipos}
                 />
                 <Boton texto="Crear colaborador"/>
             </form>

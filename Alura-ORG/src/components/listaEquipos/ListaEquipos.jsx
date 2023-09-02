@@ -1,14 +1,6 @@
+/* eslint-disable react/prop-types */
 export const ListaOpciones = (props)=>{
 
-    const equipos = [
-        "Programación",
-        "Front End",
-        "Data Science",
-        "Devops",
-        "UX y Diseño",
-        "Móvil",
-        "Innovación y Gestión"
-    ]
 
     const manejarCambio = (e) => {
         props.setEquipo(e.target.value)
@@ -29,7 +21,7 @@ export const ListaOpciones = (props)=>{
                     >
                     Seleccionar equipo
                 </option>
-                {equipos.map( 
+                {props.equipos.map( 
                     (equipos, index) => {
                         return(
                             <option 
